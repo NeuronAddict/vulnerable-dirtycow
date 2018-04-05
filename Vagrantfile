@@ -51,9 +51,9 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y libc6-dev git
-    if [[ ! -d "/vagrant/dirtycow.github.io" ]]
+    if [[ ! -d "/home/vagrant/dirtycow.github.io" ]]
     then
-     cd /vagrant
+     cd /home/vagrant
      git clone https://github.com/dirtycow/dirtycow.github.io
     fi
   SHELL
