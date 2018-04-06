@@ -50,4 +50,5 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "scripts/install.sh", privileged: true
   config.vm.provision "shell", path: "scripts/repositories.sh", privileged: false
+  config.vm.provision "shell", path: "scripts/init_exploit.sh", privileged: true
 end
